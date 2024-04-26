@@ -2,20 +2,20 @@
 <html>
 <head>
 <style>
-.flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: DodgerBlue;
-}
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+  }
 
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
 </style>
 </head>
 <body>
@@ -30,21 +30,30 @@
   <div>6</div>  
   <div>7</div>
   <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>  
+  <div>12</div>
+  <div>13</div>
+  <div>14</div>  
+  <div>15</div>
+  <div>16</div>
 </div>
 
 <p>AHAHAH GET REKT.</p>
 <p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
 <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
 
+<p id="demo"></p>
+
 <script>
+  const mcdo = new Map([
+    ["Big Mac", 193],
+    ["McSpicy", 174], 
+    ["Triple Cheese", 180]
+  ]);
 
-const mcdo = new Map([
-  ["Big Mac", 193],
-  ["Mc Spicy", 174],
-  ["Triple Cheese", 180]
-]);
-
-document.getElementById("demo").innerHTML = mcdo.get("Mc Spicy");
+  document.getElementById("demo").innerHTML = mcdo.get("McSpicy");
 </script>
 
 </body>
