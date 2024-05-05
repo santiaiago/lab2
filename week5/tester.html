@@ -128,6 +128,11 @@
 
 <p id="demo2"></p>
 
+<h2>JavaScript Class Methods</h2>
+<p>How to define and use a Class method.</p>
+
+<p id="demo3"></p>
+
 <script>
 
 const person = {
@@ -148,6 +153,23 @@ function myFunction(p1, p2) {
 
 let result = myFunction(1020, 12398982);
 document.getElementById("demo2").innerHTML = result;
+</script>
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+
+  }
+  age() {
+    const date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+
+const myCar = new Car("Pagani", 2020);
+document.getElementById("demo3").innerHTML =
+"My car is " + myCar.age() + " years old.";
 </script>
 
 </body>
