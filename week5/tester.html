@@ -139,6 +139,9 @@
 
 <p id="demo4"></p>
 
+<h2>JavaScript async / await</h2>
+<p id="demo5"></p>
+
 <script>
 
 const person = {
@@ -192,6 +195,16 @@ function mySecond() {
 
 myFirst();
 mySecond();
+</script>
+<script>
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("I love You !!");
+  });
+  document.getElementById("demo5").innerHTML = await myPromise;
+}
+
+myDisplay();
 </script>
 
 
