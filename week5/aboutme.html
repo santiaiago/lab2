@@ -5,28 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santiago Rafael Daez</title>
-   
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-image: url('img/mcdobg.jpg');
-            background-size: cover;
-            font-family: 'Anaheim', sans-serif;
-            color: #333;
+		@font-face {
+		font-family: "RobotoMono";
+		src: url(fontz/RobotoMono-Medium.ttf) format("truetype");
+		font-weight: normal;
+		}
+		@font-face {
+		font-family: "Roblox";
+		src: url(fontz/Roblox-Font-Regular.ttf) format("truetype");
+		font-weight: normal;
+		}
+		@font-face {
+		font-family: "Julius";
+		src: url(fontz/JuliusSansOne-Regular.ttf) format("truetype");
+		font-weight: normal;
+		}
+        
+		body {
+			
+			
+			background: #1a2980; 
+			background: -webkit-linear-gradient(
+				to right,
+				#0E5050,
+				#51D9D7
+				
+			  ); 
+			background: linear-gradient(
+				to right,
+				#0E5050,
+				#51D9D7
+			); 
+            
+            font-family: 'Julius', sans-serif;
+            color: #fff;
             margin: 0;
             padding: 0;
         }
+		.centered-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 100vh;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+        
+		
+		.container {
+			position: relative;
+			max-width: 800px; 
+			margin: 5vh;
+			padding: 20px;
+			padding-right: 15%;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		}
+		.leftcontainer{
+			position: relative;
+			max-width:400px;
+			max-height:100px;
+			margin: 1vh;
+			padding: 10px;
+			padding-right: 1%;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			}
+		.rightcontainer{
+			position: relative;
+			max-width:400px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			}
+		@media (max-width: 600px) {
+		.layout {
+			flex-direction: column;
+		}
+	}
 
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        h1,
         h2 {
             text-align: center;
         }
@@ -37,7 +94,9 @@
         }
 
         .info label {
-            font-weight: bold;
+            font-size: 1.5em;
+			font-family: "RobotoMono", sans-serif;
+			color: #fff;
         }
 
         .info p {
@@ -49,81 +108,83 @@
             margin-top: 30px;
             text-align: center;
         }
-		.mountainpic {
-            position: absolute;
-            top: 50%;
-            right: 10px; 
-            transform: translateY(-50%);
-            width: 400px; 
-            height: auto;
-        }
+		.content-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			
+			margin:0;
+		}
+		.image-container {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+		}
+		
+		.mountainpic,
 		.treepic {
-            position: absolute;
-            top: 50%;
-            left: 10px; /* Adjust the position as needed */
-            transform: translateY(-50%);
-            width: 500px; /* Adjust the size as needed */
-            height: auto;
-        }
+			position: relative;
+			top: 0;
+			transform: none;
+			width: 400px;
+			height: 400px;
+			margin: 100px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+		}
+
+				@media (max-width: 100px) {
+			.mountainpic,
+			.treepic {
+				width: 50%;
+			}
+		}
+
+		h6 {
+		  font-family: RobotoMono, courier;
+		  font-size: 1.2em;
+		  max-width: 65%;
+		  max-height:65%;
+		  text-align: center;
+		  color: #fff;
+		}
+		
     </style>
 </head>
 
 <body>
-    <div class="container">
-		<a href="index.html" style="font-size: 24px; font-family: Calibri; color: yellow;text-decoration: none;">Back to Burgers</a>
-        <h1>Personal Information</h1>
-        <div class="info">
-            <label>Full Name:</label>
-            <p>Santiago Rafael Daez</p>
-            <label>Nickname:</label>
-            <p>Santi</p>
-           
-            <label>Senior High School Graduated From:</label>
-            <p>Homelife Academy</p>
-			
-            <label>City the High School is located at:</label>
-            <p>Paranaque</p>
-			
-            <label>Course:</label>
-            <p>ACT-Fstack</p>
-			
-            <label>Scholarship:</label>
-            <p>No</p>
-			
-            <label>Transferee:</label>
-            <p>Freshman</p>
-			
-            <label>Did you choose this course:</label>
-            <p>Yes</p>
-			
-            <label>Why Yes:</label>
-            <p>I wanted to try out a programming related course and since this course is 2 years, I wanted to gauge if I could handle it. I also want to work in the industry because I find the line of processing with logic interesting and something I enjoy.</p>
-            
-			<label>I.T. Experience: Programming / Gaming / Others:</label>
-            <p>Basic Java and Python coding, Android Studio experience.</p>
-			
-            <label>Hobbies / Interests / libangan:</label>
-            <p>Piano, Football, Cooking/Baking</p>
-			
-            <label>What do you expect to learn from this course:</label>
-            <p>I hope to learn and accomplish programming with HTML and CSS and the technical details in developing a website.</p>
-           
-		    <label>What do you want to learn to help you in your chosen Major?</label>
-            <p>I want to learn the technical details since my major is full stack development which is the front and back end of coding. Learning the technical details in developing/programming a website can really help a lot with the focused goals in my course.</p>
-            
-			<label>Goals in life:</label>
-            <p>My goal is to keep my parents happy and earn enough to fulfill all their needs and wishes. Own a grand piano.</p>
-            
-			<label>Do you have a dream that you wish to fulfill? If yes, what is your dream?</label>
-            <p>My dream is to experience a European piano concerto with a live orchestra.</p>
-            
-			<label>Any other interesting aspects of your life that you would like to share:</label>
-            <p>I used to get paid to perform in a bar playing piano when I was 12-14.</p>
-        </div>
-    
-    <img class="mountainpic" src="img/mountainpic.jpg" alt="Mountain">
-	<img class="treepic" src="img/treepic.jpg" alt="Tree">
+	<div class="centered-content">
+      <a href="index.html" style="font-size: 24px; font-family: Roblox; color: yellow;text-decoration: none;">Back to Burgers</a>
+	  
+	  <h6>(clickable)<br><br><br><br><br><br><br><br><br><br><br><br><br>(more stuff below)<br><br>|<br>|<br>|<br>|<br>|<br>|<br>\|/</h6>	
+    </div>
 	
+	
+	
+    <div class="container">
+		<a href="index.html" style="text-decoration: none; color: inherit;">
+        <h1>About</h1>
+        <div class="info">
+            <label>Full Name: Santiago Rafael</label>
+            <p>My name is Barry Allen, and I am the fastest man alive.<br><br>
+			I graduated from Homelife Academy in my house and now I'm a freshman taking ACT-FSTACK without a scholarship.<br> 
+			<br>I have picked up basic Java and Python skills and some experience in Android Studio through the past 2 terms and I aim to master HTML, CSS , in our WEBPROG class.</p>
+           
+        </div>
+		
+		<h6>(click for more info)</h6>
+	</div>
+
+	<div class="content-wrapper">	
+	 <div class="leftcontainer">
+	 <h6>still in progress*</h6>
+	 </div>
+	 <div class="image-container">
+       <img class="mountainpic rounded-circle" src="img/mountainpic.jpg" alt="Mountain">
+       <img class="treepic rounded-circle" src="img/treepic.jpg" alt="Tree">
+	 </div>
+	</div> 
+	 
+	 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
