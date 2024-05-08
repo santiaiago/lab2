@@ -149,6 +149,11 @@ $x = 34;
 $y = 35;
 echo $x + $y;
 ?>
+<?php
+// Check if the type of a variable is float 
+$x = 10.365;
+var_dump(is_float($x));
+?>  
 
 <script>
 
