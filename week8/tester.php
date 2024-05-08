@@ -142,6 +142,8 @@
 <h2>JavaScript async / await</h2>
 <p id="demo5"></p>
 
+<?php echo "deez nuts";?>
+
 <script>
 
 const person = {
