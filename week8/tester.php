@@ -180,6 +180,9 @@ var_dump($e);
 
 <p>Note that when casting a Boolean into string it gets the value "1", and when casting NULL into string it is converted into an empty string "".</p>
 
+<?php
+echo(rand(1, 10));
+?>
 
 <script>
 
