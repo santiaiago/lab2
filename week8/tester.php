@@ -117,7 +117,7 @@
         </style>
     </head>
 	<body>
-<a  href="aboutme.html" style="font-size: 24px; font-family: Roblox; color:#fff; text-decoration: none;">back</a>
+<a  href="index.html" style="font-size: 24px; font-family: Roblox; color:#fff; text-decoration: none;">back</a>
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
