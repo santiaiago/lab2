@@ -102,7 +102,7 @@
 		  font-size: 0.8em;
 		  max-width: 65%;
 		  max-height:65%;
-		  text-align: center;
+		  text-align: left;
 		  color: #fff;
 		}
 		p {
@@ -110,10 +110,11 @@
 		  font-size: 1.2em;
 		  max-width: 65%;
 		  max-height:65%;
-		  text-align: center;
+		  text-align: left;
 		  color: #fff;
 		}
         .error {color: #FF0000;}  
+		
         </style>
     </head>
 	<body>
@@ -125,7 +126,7 @@ $name = $email = $gender = $comment = $website = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
+    $nameErr = "<span style='font-family: RobotoMono;color:red;'>Are you scared im going to stalk you</span>";
   } else {
     $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
@@ -135,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   
   if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
+    $emailErr = "<span style='font-family: RobotoMono;color:red;'>Why didn't you put your email???</span>";
   } else {
     $email = test_input($_POST["email"]);
     // check if e-mail address is well-formed
@@ -161,7 +162,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
+    $genderErr = "<span style='font-family: RobotoMono;color:red;'>Why didn't you put your gender???</span>";
   } else {
     $gender = test_input($_POST["gender"]);
   }
@@ -178,25 +179,26 @@ function test_input($data) {
 <h2>Look at this amazing Form</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name" value="<?php echo $name;?>">
+  <h4>Name:</h4> <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+  <h4>E-mail:</h4> <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  Website: <input type="text" name="website" value="<?php echo $website;?>">
+  <h4>Website:</h4> <input type="text" name="website" value="<?php echo $website;?>">
   <span class="error"><?php echo $websiteErr;?></span>
   <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+  <h4>Comment:</h4> <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
-  Gender:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
+  <h4>Gender:</h4>
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female"><h4>Female</h4>
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male"><h4>Male</h4>
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other"><h4>Other</h4>  
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
-  <input type="submit" name="submit" value="Submit">  
+  <input type="submit" value="Submit" style="font-family:'RobotoMono'">  
 </form>
+
 
 <?php
 echo "<h2>results:</h2>";
