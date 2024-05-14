@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago Rafael Daez</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+		@font-face {
+		font-family: "RobotoMono";
+		src: url(fontz/RobotoMono-Medium.ttf) format("truetype");
+		font-weight: normal;
+		}
+		@font-face {
+		font-family: "Roblox";
+		src: url(fontz/Roblox-Font-Regular.ttf) format("truetype");
+		font-weight: normal;
+		}
+		@font-face {
+		font-family: "Julius";
+		src: url(fontz/JuliusSansOne-Regular.ttf) format("truetype");
+		font-weight: normal;
+		}
+        
+		body {
+			
+			
+			background: #1a2980; 
+			background: -webkit-linear-gradient(
+				to right,
+				#0E5050,
+				#51D9D7
+				
+			  ); 
+			background: linear-gradient(
+				to right,
+				#0E5050,
+				#51D9D7
+			); 
+            
+            font-family: 'Julius', sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+		.centered-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 100vh;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+        
+		
+		.container {
+			position: relative;
+			max-width: 800px; 
+			margin: 5vh;
+			padding: 20px;
+			padding-right: 15%;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		}
+		.leftcontainer{
+			position: relative;
+			max-width:400px;
+			max-height:100px;
+			margin: 1vh;
+			padding: 10px;
+			padding-right: 1%;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			}
+		.rightcontainer{
+			position: relative;
+			max-width:400px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			}
+		@media (max-width: 600px) {
+		.layout {
+			flex-direction: column;
+		}
+	}
+
+        h2 {
+            text-align: center;
+        }
+
+        .info {
+            margin-bottom: 20px;
+			padding: 10px;
+        }
+
+        .info label {
+            font-size: 1.5em;
+			font-family: "RobotoMono", sans-serif;
+			color: #fff;
+        }
+
+        .info p {
+            margin: 5px 0;
+        }
+
+        .note {
+            font-style: italic;
+            margin-top: 30px;
+            text-align: center;
+        }
+		.content-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			
+			margin:0;
+		}
+		.image-container {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+		}
+		
+		.mountainpic,
+		.treepic {
+			position: relative;
+			top: 0;
+			transform: none;
+			width: 400px;
+			height: 400px;
+			margin: 100px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+		}
+
+				@media (max-width: 100px) {
+			.mountainpic,
+			.treepic {
+				width: 50%;
+			}
+		}
+
+		h6 {
+		  font-family: RobotoMono, courier;
+		  font-size: 1.2em;
+		  max-width: 65%;
+		  max-height:65%;
+		  text-align: center;
+		  color: #fff;
+		}
+		
+    </style>
+</head>
+
+<body>
+	<div class="centered-content">
+      <a href="index.html" style="font-size: 24px; font-family: Roblox; color: yellow;text-decoration: none;">Back to Burgers</a>
+	  
+	  <h6>(clickable)<br><br><br><br><br><br><br><br><br><br><br><br><br>(more stuff below)<br><br>|<br>|<br>|<br>|<br>|<br>|<br>\|/</h6>	
+    </div>
+	
+	
+	
+    <div class="container">
+		<a href="index.html" style="text-decoration: none; color: inherit;">
+        <h1>About</h1>
+        <div class="info">
+            <label>Full Name: Santiago Rafael</label>
+            <p>My name is Barry Allen, and I am the fastest man alive.<br><br>
+			I graduated from Homelife Academy in my house and now I'm a freshman taking ACT-FSTACK without a scholarship.<br> 
+			<br>I have picked up basic Java and Python skills and some experience in Android Studio through the past 2 terms and I aim to master HTML, CSS , in our WEBPROG class.</p>
+           
+        </div>
+		
+		<h6>(click for more info)</h6>
+	</div>
+
+	<div class="content-wrapper">	
+	 <div class="leftcontainer">
+	 <h6>still in progress*</h6>
+	 </div>
+	 <div class="image-container">
+       <img class="mountainpic rounded-circle" src="img/mountainpic.jpg" alt="Mountain">
+       <img class="treepic rounded-circle" src="img/treepic.jpg" alt="Tree">
+	 </div>
+	</div> 
+	 
+	 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
